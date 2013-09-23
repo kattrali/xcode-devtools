@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+# Configuration
+xcode_path = "/Applications/Xcode.app"
+
+frameworks = [
+  "DevToolsCore", "DevToolsFoundation", 
+  "IDEKit", "IDEFoundation", "DevToolsKit", 
+  "DVTFoundation", "DVTKit"
+]
+
+frameworks_paths = [
+  "/Contents/OtherFrameworks", 
+  "/Contents/SharedFrameworks",
+  "/Contents/Frameworks"
+]
+
+destination_path = "/Users/delisa/Code/Personal/XcodeFrameworks/"
+
+frameworks_paths.each do |parent_path|
+  frameworks.each do |name|
+    framework_path = File.join(xcode_path, parent_path, "#{name}.framework")
+    if File.exists? framework_path
+      p "Dumping #{name}..."
+      `class-dump -a #{parent_path}/#{name}.framework/#{name} > #{destination_path}/#{name}.h`
+    end
+  end
+end

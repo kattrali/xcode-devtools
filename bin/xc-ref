@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# Searches framework header files for class or property names
+# Dependencies:
+#   - Pygments (http://pygments.org/)
+
+files   = "/Users/delisa/Code/Personal/XcodeFrameworks/*.h"
+filter  = ARGV[0]
+
+Dir.glob(files).each do |header|
+  matches = `cat #{header} | grep #{filter}`
+  if matches.length > 0
+    matches.lines.each do |line| 
+      File.write("/tmp/xcframework.m", "[#{File.basename(header)}] " + line.strip)
+      STDOUT.write `pygmentize /tmp/xcframework.m`
+    end
+  end
+end
