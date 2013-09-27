@@ -20,7 +20,7 @@ frameworks_paths = [
   "/Contents/Frameworks"
 ]
 
-destination_path = "/Users/delisa/Code/Personal/XcodeFrameworks/"
+destination_path = File.expand_path "~/Code/Personal/XcodeFrameworks/"
 
 frameworks_paths.each do |parent_path|
   frameworks.each do |name|

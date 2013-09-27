@@ -1,6 +1,6 @@
 ## xcode-devtools
 
-Useful scripts for plugin development
+Useful scripts for plugin development. Some scripts have file paths for code that need to be customized.
 
 ### Handy links:
 

@@ -5,7 +5,7 @@
 # Dependencies:
 #   - Pygments (http://pygments.org/)
 
-files   = "/Users/delisa/Code/Personal/XcodeFrameworks/*.h"
+files   = File.expand_path "~/Code/Personal/XcodeFrameworks/*.h"
 filter  = ARGV[0]
 
 Dir.glob(files).each do |header|
