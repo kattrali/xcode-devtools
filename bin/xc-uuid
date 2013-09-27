@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Retrieve latest Xcode compatibility UUID
+
+defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
