@@ -1,1 +1,5 @@
+#!/bin/sh
+#
+# Attach a debugger to the running Xcode process
+
 lldb -p `ps aux | grep Xcode | grep -v grep | awk '{print $2}'`

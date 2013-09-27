@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
+#
+# Dump headers of dev frameworks
+#
+# Dependencies:
+# - class-dump (https://github.com/nygard/class-dump)
 
 # Configuration
 xcode_path = "/Applications/Xcode.app"

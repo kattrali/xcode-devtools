@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
+#
 # Searches framework header files for class or property names
+#
 # Dependencies:
 #   - Pygments (http://pygments.org/)
 
